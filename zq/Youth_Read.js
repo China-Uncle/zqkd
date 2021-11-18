@@ -11,7 +11,8 @@ Github Actions使用方法见[@lxk0301](https://raw.githubusercontent.com/lxk030
 const $ = new Env("中青看点阅读")
 //const notify = $.isNode() ? require('./sendNotify') : '';
 let ReadArr = [], timebodyVal = "";
-let YouthBody = $.getdata('youth_autoread') || $.getdata("zqgetbody_body");
+let YouthBody = $.getdata('youth_autoread') || $.getdata("zqwzbody");
+let zq_timebody = $.getdata("zq_timebody");
 let artsnum = 0, videosnum = 0;
 let videoscore = 0, readscore = 0;
 function Getbody() {

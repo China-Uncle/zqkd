@@ -147,8 +147,8 @@ Object.keys(zqwzbodys).forEach((item) => {
 function getzqwzbody() {
     if ($request.url.match(/\/kandian.youth.cn\/v5\/article\/complete.json/)) {
           bodyVal1 = $request.url.split('p=')[1]
-          console.log(encodeURIComponent(bodyVal1))
-          bodyVal = 'p='+encodeURIComponent(bodyVal1)
+          console.log(bodyVal1)
+          bodyVal = 'p='+bodyVal1
             console.log(bodyVal)
 
         if (zqwzbody) {

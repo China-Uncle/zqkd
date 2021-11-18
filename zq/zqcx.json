@@ -1,0 +1,20 @@
+
+{
+    "name": "中青重写订阅",
+    "author": "elecV2p",
+    "mitmhost": ["kandian.youth.cn"],
+    "rewrite": [
+        {
+            "match": "https://kandian.youth.cn/v5/article/complete.json",
+            "target": "https://github.com/China-Uncle/zqkd/raw/main/zq/Youth_Read.js",
+            "enable": true
+          },
+          {
+            "match": "https://kandian.youth.cn/v5/user/stay.json",
+            "target": "https://github.com/China-Uncle/zqkd/raw/main/zq/Youth_Read.js",
+            "enable": true
+          }
+     
+    ]
+  }
+  

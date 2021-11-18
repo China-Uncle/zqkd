@@ -1,4 +1,3 @@
-
 /*
 shaolin-kongfu
 
@@ -146,16 +145,16 @@ Object.keys(zqwzbodys).forEach((item) => {
 
 function getzqwzbody() {
     if ($request.url.match(/\/kandian.youth.cn\/v5\/article\/complete.json/)) {
-          bodyVal1 = $request.url.split('p=')[1]
-          console.log(bodyVal1)
-          bodyVal = 'p='+bodyVal1
-            console.log(bodyVal)
-
+        
+        bodyVal = $request.body
+          console.log(bodyVal)
         if (zqwzbody) {
             if (zqwzbody.indexOf(bodyVal) > -1) {
                 $.log("此阅读请求已存在，本次跳过")
             } else if (zqwzbody.indexOf(bodyVal) == -1) {
+console.log("没有这个，需要增加")
                 zqwzbodys = zqwzbody + "&" + bodyVal;
+console.log("没有这个，需要增加"+zqwzbodys)
                 $.setdata(zqwzbodys, 'zqwzbody');
                 $.log(`${$.name}获取阅读: 成功, zqwzbodys: ${bodyVal}`);
                 bodys = zqwzbodys.split("&")
@@ -196,7 +195,7 @@ function wzjl(timeout = 0) {
 
 
 function getzq_timebody() {
-    if ($request.url.match(/\/kandian.wkandian.com\/v5\/user\/stay.json/)) {
+    if ($request.url.match(/\/kandian.youth.cn\/v5\/user\/stay.json/)) {
           bodyVal=$request.body
             console.log(bodyVal)
         if (zq_timebody) {

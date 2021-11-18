@@ -71,14 +71,14 @@ if (isGetbody = typeof $request !== `undefined`) {
     if (!YouthBody || YouthBody == undefined || YouthBody == "undefined") {
         console.log(`没有读取到变量数据\n`) 
     }else{ 
-            if (YOUTH_READ.indexOf('&') > -1) {
-                YouthBody = YOUTH_READ.split('&');
+            if (YouthBody.indexOf('&') > -1) {
+                YouthBody = YouthBody.split('&');
                 console.log(`您选择的是用"&"隔开\n`)
-            } else if (YOUTH_READ.indexOf('\n') > -1) {
-                YouthBody = YOUTH_READ.split('\n');
+            } else if (YouthBody.indexOf('\n') > -1) {
+                YouthBody = YouthBody.split('\n');
                 console.log(`您选择的是用换行隔开\n`)
             } else {
-                YouthBody = [YOUTH_READ]
+                YouthBody = [YouthBody]
             } 
 
 

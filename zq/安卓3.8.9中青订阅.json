@@ -68,5 +68,11 @@
       "target": "https://raw.githubusercontent.com/China-Uncle/zqkd/main/zq/zqssz.js",
       "enable": true
     }
+    ,
+    {
+      "match": "https://kandian.youth.cn/V17/Ximalaya/setCompleteSec.json",
+      "target": "https://raw.githubusercontent.com/liuqi6968/-/main/zq_music.js",
+      "enable": true
+    }
   ]
 }

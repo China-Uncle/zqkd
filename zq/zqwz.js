@@ -1,3 +1,4 @@
+
 /*
 shaolin-kongfu
 
@@ -144,17 +145,17 @@ Object.keys(zqwzbodys).forEach((item) => {
 
 
 function getzqwzbody() {
-    if ($request.url.match(/\/kandian.youth.cn\/v5\/article\/complete.json/)) {
-        
-        bodyVal = $request.body
-          console.log(bodyVal)
+    if ($request.url.match(/\/kandian.youth.cn\/v5\/article\/info.json/)||$request.url.match(/\/kandian.youth.cn\/v5\/article\/detail.json/)) {
+          bodyVal1 = $request.url.split('p=')[1]
+          console.log(encodeURIComponent(bodyVal1))
+          bodyVal = 'p='+encodeURIComponent(bodyVal1)
+            console.log(bodyVal)
+
         if (zqwzbody) {
             if (zqwzbody.indexOf(bodyVal) > -1) {
                 $.log("此阅读请求已存在，本次跳过")
             } else if (zqwzbody.indexOf(bodyVal) == -1) {
-console.log("没有这个，需要增加")
                 zqwzbodys = zqwzbody + "&" + bodyVal;
-console.log("没有这个，需要增加"+zqwzbodys)
                 $.setdata(zqwzbodys, 'zqwzbody');
                 $.log(`${$.name}获取阅读: 成功, zqwzbodys: ${bodyVal}`);
                 bodys = zqwzbodys.split("&")
